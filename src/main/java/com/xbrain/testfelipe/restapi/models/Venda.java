@@ -8,7 +8,7 @@ import java.util.Date;
 public class Venda {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private long id;
+    private int id;
 
     private Date dataVenda;
 
@@ -30,18 +30,18 @@ public class Venda {
 
     }
 
-    public Venda(long id, Date dataVenda, Double valor, Vendedor vendedor) {
+    public Venda(int id, Date dataVenda, Double valor, Vendedor vendedor) {
         this.id = id;
         this.dataVenda = dataVenda;
         this.valor = valor;
         this.vendedor = vendedor;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
