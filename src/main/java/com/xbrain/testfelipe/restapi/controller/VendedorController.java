@@ -12,7 +12,7 @@ public class VendedorController {
     @Autowired
     private RepositoryVendedor repository;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @GetMapping("/vendedor")
     public @ResponseBody Iterable<Vendedor> getAll() {
         return repository.findAll();
     }
